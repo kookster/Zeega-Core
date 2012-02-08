@@ -172,37 +172,37 @@ var DiscoveryEventMap = Backbone.View.extend({
 
 		// support GetFeatureInfo
 		map.events.register('click', map, function(e) {
-			// var params = {
-			// REQUEST : "GetFeatureInfo",
-			// EXCEPTIONS : "application/vnd.ogc.se_xml",
-			// BBOX : map.getExtent().toBBOX(),
-			// SERVICE : "WMS",
-			// VERSION : "1.1.1",
-			// X : e.xy.x,
-			// Y : e.xy.y,
-			// INFO_FORMAT : 'text/html',
-			// QUERY_LAYERS : map.layers[0].params.LAYERS,
-			// FEATURE_COUNT : 50,
-			// Layers : 'cite:item',
-			// WIDTH : map.size.w,
-			// HEIGHT : map.size.h,
+			 var params = {
+			 REQUEST : "GetFeatureInfo",
+			 EXCEPTIONS : "application/vnd.ogc.se_xml",
+			 BBOX : map.getExtent().toBBOX(),
+			 SERVICE : "WMS",
+			 VERSION : "1.1.1",
+			 X : e.xy.x,
+			 Y : e.xy.y,
+			 INFO_FORMAT : 'text/html',
+			 QUERY_LAYERS : map.layers[0].params.LAYERS,
+			 FEATURE_COUNT : 50,
+			 Layers : 'cite:item',
+			 WIDTH : map.size.w,
+			 HEIGHT : map.size.h,
 			// format : format,
-			// styles : map.layers[0].params.STYLES,
-			// srs : map.layers[0].params.SRS
-			// };
-			// // merge filters
-			// if (map.layers[0].params.CQL_FILTER != null) {
-			// params.cql_filter = map.layers[0].params.CQL_FILTER;
-			// }
-			// if (map.layers[0].params.FILTER != null) {
-			// params.filter = map.layers[0].params.FILTER;
-			// }
-			// if (map.layers[0].params.FEATUREID) {
-			// params.featureid = map.layers[0].params.FEATUREID;
-			// }
-			// OpenLayers.loadURL(geoUrl + "cite/wms", params, this,
-			// this.clickResponseHandler, this.clickResponseHandler);
-			// OpenLayers.Event.stop(e);
+			 styles : map.layers[0].params.STYLES,
+			 srs : map.layers[0].params.SRS
+			 };
+			  //merge filters
+			 if (map.layers[0].params.CQL_FILTER != null) {
+			 params.cql_filter = map.layers[0].params.CQL_FILTER;
+			 }
+			 if (map.layers[0].params.FILTER != null) {
+			 params.filter = map.layers[0].params.FILTER;
+			 }
+			 if (map.layers[0].params.FEATUREID) {
+			 params.featureid = map.layers[0].params.FEATUREID;
+			 }
+			 OpenLayers.loadURL(geoUrl + "cite/wms", params, this,
+			 this.clickResponseHandler, this.clickResponseHandler);
+			 OpenLayers.Event.stop(e);
 
 		});
 	},

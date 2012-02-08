@@ -1,5 +1,5 @@
 var apiUrl = "http://dev.zeega.org/jda/web/api/";
-var geoUrl = "http://dev.zeega.org/geoserver/";
+var geoUrl = "http://geo.zeega.org/geoserver/";
 var japanMapUrl = "http://worldmap.harvard.edu/geoserver/";
 
 var filters = new FilterCollection(new Array());
